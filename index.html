@@ -10,17 +10,21 @@ body{min-height:100vh;background:#070114;color:#fff}
 .bg{position:fixed;inset:0;background:linear-gradient(rgba(7,1,20,0.6),rgba(7,1,20,0.92)),url('bg_img.jpg') center/cover no-repeat;z-index:-2}
 .top{width:100%;background:#1a0833;text-align:center;padding:8px 0;letter-spacing:4px;font-size:10px;color:#d8b4fe;border-bottom:1px solid #a855f7;position:sticky;top:0;z-index:10}
 
-/* FIT XY COVER */
+/* SAGAD LEFT RIGHT + FIT XY */
 .cover-wrap{
-  width:100%;
-  max-width:480px;
-  margin:10px auto 0;
-  padding:0 10px;
+  width:100vw;
+  margin-left:calc(-50vw + 50%);
+  margin-right:calc(-50vw + 50%);
+  margin-top:0;
+  padding:0;
 }
 .cover-box{
   width:100%;
-  border:2px solid #c084fc;
-  border-radius:16px;
+  border-top:2px solid #c084fc;
+  border-bottom:2px solid #c084fc;
+  border-left:none;
+  border-right:none;
+  border-radius:0;
   overflow:hidden;
   background:#000;
   box-shadow:0 0 20px rgba(168,85,247,0.5);
@@ -29,7 +33,7 @@ body{min-height:100vh;background:#070114;color:#fff}
   width:100%;
   height:100%;
   display:block;
-  object-fit: fill; /* FIT XY */
+  object-fit: fill;
 }
 
 .content{max-width:480px;margin:0 auto;padding:12px 14px 30px}
