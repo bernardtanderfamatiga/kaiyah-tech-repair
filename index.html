@@ -3,177 +3,165 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>BOSS KAIYAH TECH REPAIR | Cavite</title>
-<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700;900&family=Inter:wght@400;600;900&display=swap" rel="stylesheet">
+<title>BOSS KAIYAH TECH REPAIR - Cavite</title>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@900&family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 body{background:#06000F;color:#fff;font-family:'Inter',sans-serif}
 :root{--p:#A855F7;--card:#110A25;--bg:#06000F}
-.topnav{position:fixed;top:0;left:0;width:100%;z-index:100;display:flex;justify-content:space-between;align-items:center;padding:12px 16px;background:rgba(6,0,15,.85);backdrop-filter:blur(10px);border-bottom:1px solid #1A1230}
-.logo{font-family:'Orbitron';font-weight:900;font-size:13px}
-.logo span{color:var(--p)}
-.btn-book{background:var(--p);color:#fff;border:none;padding:10px 18px;border-radius:30px;font-weight:900;font-size:12px;box-shadow:0 6px 20px rgba(168,85,247,.5)}
-.hero{margin-top:55px;position:relative;height:420px;overflow:hidden}
+.topnav{position:fixed;top:0;left:0;width:100%;z-index:100;display:flex;justify-content:space-between;align-items:center;padding:10px 16px;background:rgba(6,0,15,.95);backdrop-filter:blur(10px);border-bottom:1px solid #1A1230}
+.logo-wrap{display:flex;align-items:center;gap:10px}
+.logo-wrap img{width:48px;height:48px;border-radius:50%;border:2px solid var(--p);object-fit:cover;box-shadow:0 0 18px rgba(168,85,247,.7);background:#000}
+.btn-book{background:var(--p);color:#fff;border:none;padding:11px 20px;border-radius:30px;font-weight:900;font-size:11px;box-shadow:0 6px 20px rgba(168,85,247,.5)}
+.update{margin-top:70px;background:linear-gradient(90deg,#A855F7,#7C3AED);padding:11px 16px;display:flex;gap:10px;align-items:center;font-size:11px;font-weight:700}
+.hero{position:relative;height:400px;overflow:hidden}
 .hero img{width:100%;height:100%;object-fit:cover}
-.hero .overlay{position:absolute;inset:0;background:linear-gradient(0deg,var(--bg) 10%,transparent 60%)}
-.hero-text{position:absolute;bottom:30px;left:16px;right:16px}
-.hero-text h1{font-family:'Orbitron';font-size:36px;line-height:.9}
+.hero .ov{position:absolute;inset:0;background:linear-gradient(0deg,#06000F 20%,transparent 70%)}
+.hero-text{position:absolute;bottom:24px;left:16px}
+.hero-text h1{font-family:'Orbitron';font-size:34px;line-height:.9}
 .hero-text h1 span{color:var(--p)}
-.hero-text p{color:#aaa;font-size:12px;margin-top:8px}
-.main-offer{display:grid;grid-template-columns:1fr 1fr;gap:10px;padding:16px}
+.hero-text p{color:#aaa;font-size:11px;margin-top:6px}
+.main{display:grid;grid-template-columns:1fr 1fr;gap:10px;padding:16px}
 .card{background:var(--card);border:1px solid #221444;border-radius:16px;overflow:hidden}
 .card img{width:100%;height:100px;object-fit:cover}
 .card-info{padding:10px}
-.card-info h3{font-family:'Orbitron';font-size:11px}
+.card-info h3{font-family:'Orbitron';font-size:10px}
 .card-info h3 span{color:var(--p)}
-.card-info p{font-size:9px;color:#777;margin-top:3px}
-.services{padding:0 16px}
-.services h2{font-family:'Orbitron';font-size:15px;margin:18px 0 12px}
-.services h2 span{color:var(--p)}
-.grid-list{display:grid;grid-template-columns:1fr 1fr;gap:9px}
-.item{background:linear-gradient(135deg,#150D2E,#0A0518);border:1px solid #221444;border-radius:12px;padding:10px;display:flex;gap:9px;align-items:center}
-.item .ic{width:32px;height:32px;background:var(--p);border-radius:8px;display:grid;place-items:center;font-size:14px}
+.card-info p{font-size:9px;color:#777;margin-top:2px}
+.videos{padding:0 16px}
+.videos h2{font-family:'Orbitron';font-size:14px;margin:16px 0 12px}
+.videos h2 span{color:var(--p)}
+.vid{background:var(--card);border:1px solid #221444;border-radius:16px;overflow:hidden;margin-bottom:14px}
+.vid video{width:100%;height:230px;background:#000;object-fit:cover}
+.vid .cap{padding:10px 12px;font-size:11px;color:#ddd;display:flex;justify-content:space-between}
+.services{padding:0 16px;display:grid;grid-template-columns:1fr 1fr;gap:9px;margin-top:10px}
+.item{background:#150D2E;border:1px solid #221444;border-radius:12px;padding:10px;display:flex;gap:8px;align-items:center}
+.item .ic{width:28px;height:28px;background:var(--p);border-radius:7px;display:grid;place-items:center;font-size:13px;flex-shrink:0}
 .item b{font-size:10px;display:block}
-.item small{font-size:8.5px;color:#888}
-
-/* VIDEO */
-.videos{padding:0 16px;margin-top:20px}
-.video-box{background:var(--card);border:1px solid #221444;border-radius:14px;overflow:hidden;margin-bottom:10px}
-.video-box video{width:100%;height:200px;object-fit:cover;background:#000}
-.video-box .cap{padding:8px 12px;font-size:11px;color:#aaa}
-
-/* CONTACT */
+.item small{font-size:8px;color:#888}
 .contact{padding:16px;background:#0D0720;margin-top:18px;border-top:1px solid #1A1230}
-.contact h2{font-family:'Orbitron';font-size:14px}
-.cbtns{display:flex;gap:8px;margin-top:12px;flex-wrap:wrap}
-.cbtn{flex:1;min-width:100px;padding:12px;border-radius:12px;text-align:center;text-decoration:none;font-weight:900;font-size:11px;color:#fff}
-.cbtn.mes{background:#006AFF}
-.cbtn.call{background:var(--p)}
-.cbtn.sms{background:#222;border:1px solid #333}
-
-footer{text-align:center;padding:14px;font-size:9px;color:#555;border-top:1px solid #111}
-footer b{color:#666}
-
-/* BOOK MODAL */
-#bookModal{position:fixed;inset:0;background:rgba(0,0,0,.85);z-index:200;display:none;place-items:center;padding:16px}
+.cbtns{display:flex;gap:8px;margin-top:10px}
+.cbtn{flex:1;padding:13px;border-radius:12px;text-align:center;text-decoration:none;font-weight:900;font-size:11px;color:#fff}
+.cbtn.mes{background:#006AFF}.cbtn.call{background:var(--p)}.cbtn.sms{background:#222;border:1px solid #333}
+footer{text-align:center;padding:14px;font-size:8px;color:#555;border-top:1px solid #111;line-height:1.6}
+#bookModal,#adminModal{position:fixed;inset:0;background:rgba(0,0,0,.9);z-index:300;display:none;place-items:center;padding:16px}
 .modal{background:#110A25;border:1px solid var(--p);border-radius:18px;padding:18px;width:100%;max-width:380px}
-.modal h3{font-family:'Orbitron';font-size:14px;margin-bottom:10px}
+.modal h3{font-family:'Orbitron';font-size:13px;margin-bottom:10px}
 .modal h3 span{color:var(--p)}
 .modal input,.modal select,.modal textarea{width:100%;padding:10px;border-radius:10px;border:1px solid #2A1A4A;background:#0A0518;color:#fff;margin-bottom:8px;font-size:12px}
-.modal textarea{height:70px;resize:none}
+.modal textarea{height:75px;resize:none}
 .mbtns{display:flex;gap:8px;margin-top:10px}
 .mbtn{flex:1;padding:12px;border-radius:12px;border:none;font-weight:900;font-size:12px}
-.mbtn.cancel{background:#222;color:#fff}
-.mbtn.send{background:var(--p);color:#fff}
-@media(min-width:768px){.main-offer{grid-template-columns:repeat(4,1fr)}.grid-list{grid-template-columns:repeat(3,1fr)}.hero-text h1{font-size:52px}}
+.cancel{background:#222;color:#fff}.send{background:var(--p);color:#fff}
+@media(min-width:768px){.main{grid-template-columns:repeat(4,1fr)}.hero-text h1{font-size:52px}.services{grid-template-columns:repeat(3,1fr)}}
 </style>
 </head>
 <body>
 
 <div class="topnav">
-<div class="logo">🔧 BOSS KAIYAH<br><span>TECH REPAIR</span></div>
+<div class="logo-wrap">
+<img id="secretLogo" src="logo.png" alt="Boss Kaiyah Logo">
+</div>
 <button class="btn-book" onclick="openBook()">BOOK NOW</button>
 </div>
 
+<div class="update" id="updateBox">📢 <span id="updateText">I'm available now - PM lang! May promo tayo this week sa LCD 🔧</span></div>
+
 <div class="hero">
-<img src="https://images.unsplash.com/photo-1593642632823-8f785ba67e45?w=1200" alt="Repair">
-<div class="overlay"></div>
+<img src="https://images.unsplash.com/photo-1593642632823-8f785ba67e45?w=1200&q=80&auto=format" alt="Repair">
+<div class="ov"></div>
 <div class="hero-text">
-<h1>BOSS KAIYAH<br><span>TECH REPAIR</span></h1>
-<p>Cellphone • Computer • Printer • Gaming Build • Cavite Based</p>
+<h1>CELLPHONE<br>COMPUTER<br><span>PRINTER & GAMING BUILD</span></h1>
+<p>Basic Repair • Parts Replacement • Cavite</p>
 </div>
 </div>
 
-<div class="main-offer">
-<div class="card"><img src="https://images.unsplash.com/photo-1585060544812-6b45742d762f?w=400" alt="Cellphone"><div class="card-info"><h3>CELLPHONE <span>REPAIR</span></h3><p>LCD, Battery, Charging Port</p></div></div>
-<div class="card"><img src="https://images.unsplash.com/photo-1591488320449-011701bb6704?w=400" alt="Computer"><div class="card-info"><h3>COMPUTER <span>REPAIR</span></h3><p>Laptop, Desktop, No Display</p></div></div>
-<div class="card"><img src="https://images.unsplash.com/photo-1612815154858-60aa4c59eaa6?w=400" alt="Printer"><div class="card-info"><h3>PRINTER <span>REPAIR</span></h3><p>No Print, Paper Jam, Cleaning</p></div></div>
-<div class="card"><img src="https://images.unsplash.com/photo-1587202372775-e229f172b9d7?w=400" alt="Gaming"><div class="card-info"><h3>GAMING <span>BUILD</span></h3><p>Custom PC, Upgrade, RGB</p></div></div>
-</div>
-
-<div class="services">
-<h2>WE CAN <span>REPAIR & BUILD</span></h2>
-<div class="grid-list">
-<div class="item"><div class="ic">📱</div><div><b>Cellphone Repair</b><small>LCD / Touchscreen / Battery / Charging</small></div></div>
-<div class="item"><div class="ic">💻</div><div><b>Computer / Laptop</b><small>No Power / No Display / Keyboard</small></div></div>
-<div class="item"><div class="ic">🖨️</div><div><b>Printer Repair</b><small>No Print / Paper Jam / Cleaning</small></div></div>
-<div class="item"><div class="ic">🎮</div><div><b>Gaming PC Build</b><small>Custom Build / Upgrade / Setup</small></div></div>
-<div class="item"><div class="ic">🔋</div><div><b>Parts Replacement</b><small>LCD / Battery / Keyboard / RAM / SSD / Charger</small></div></div>
-<div class="item"><div class="ic">💾</div><div><b>Software Service</b><small>Reformat / OS Install / Apps / Virus Removal</small></div></div>
-<div class="item"><div class="ic">🧹</div><div><b>Deep Cleaning</b><small>Laptop / Desktop / Thermal Paste</small></div></div>
-<div class="item"><div class="ic">⚡</div><div><b>Basic Troubleshooting</b><small>Slow PC / Hanging / No Internet</small></div></div>
-</div>
+<div class="main">
+<div class="card"><img src="https://images.unsplash.com/photo-1585060544812-6b45742d762f?w=400&q=80"><div class="card-info"><h3>CELLPHONE <span>REPAIR</span></h3><p>LCD / Battery / Charging Port</p></div></div>
+<div class="card"><img src="https://images.unsplash.com/photo-1591488320449-011701bb6704?w=400&q=80"><div class="card-info"><h3>COMPUTER <span>REPAIR</span></h3><p>Laptop / Desktop / No Display</p></div></div>
+<div class="card"><img src="https://images.unsplash.com/photo-1612815154858-60aa4c59eaa6?w=400&q=80"><div class="card-info"><h3>PRINTER <span>REPAIR</span></h3><p>No Print / Paper Jam / Cleaning</p></div></div>
+<div class="card"><img src="https://images.unsplash.com/photo-1587202372775-e229f172b9d7?w=400&q=80"><div class="card-info"><h3>GAMING <span>BUILD</span></h3><p>Custom PC / Upgrade / RGB</p></div></div>
 </div>
 
 <div class="videos">
-<h2 style="font-family:Orbitron;font-size:14px;margin-bottom:10px">REPAIR <span style="color:#A855F7">VIDEOS</span></h2>
-<div class="video-box">
-<video controls poster="https://images.unsplash.com/photo-1587202372775-e229f172b9d7?w=600">
-<source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+<h2>REAL <span>REPAIR VIDEOS</span></h2>
+<div class="vid">
+<video controls playsinline poster="https://images.unsplash.com/photo-1585060544812-6b45742d762f?w=600">
+<source src="https://videos.pexels.com/video-files/18069234/18069234-uhd_1440_1440_24fps.mp4" type="video/mp4">
 </video>
-<div class="cap">📱 Cellphone LCD Replacement - Actual Repair</div>
+<div class="cap"><span>📱 Cellphone LCD Replacement - Actual Repair</span><span>▶</span></div>
 </div>
-<div class="video-box">
-<video controls poster="https://images.unsplash.com/photo-1591488320449-011701bb6704?w=600">
-<source src="https://www.w3schools.com/html/movie.mp4" type="video/mp4">
+<div class="vid">
+<video controls playsinline poster="https://images.unsplash.com/photo-1591488320449-011701bb6704?w=600">
+<source src="https://videos.pexels.com/video-files/3191570/3191570-uhd_2560_1440_25fps.mp4" type="video/mp4">
 </video>
-<div class="cap">💻 Laptop Cleaning & Thermal Paste</div>
+<div class="cap"><span>💻 Laptop Cleaning & Thermal Repaste - Real Repair</span><span>▶</span></div>
 </div>
-<p style="font-size:10px;color:#666;margin-top:6px">*Palitan mo lang yung video link ng sarili mong video na inupload sa GitHub o Facebook. Pwede din YouTube embed.</p>
+</div>
+
+<div class="services">
+<div class="item"><div class="ic">📱</div><div><b>Cellphone Repair</b><small>LCD / Battery / Charging Port</small></div></div>
+<div class="item"><div class="ic">💻</div><div><b>Computer Repair</b><small>No Power / No Display / Keyboard</small></div></div>
+<div class="item"><div class="ic">🖨️</div><div><b>Printer Repair</b><small>No Print / Paper Jam / Cleaning</small></div></div>
+<div class="item"><div class="ic">🎮</div><div><b>Gaming Build</b><small>Custom PC / Upgrade / RGB Setup</small></div></div>
+<div class="item"><div class="ic">🔋</div><div><b>Parts Replacement</b><small>LCD / Battery / Keyboard / RAM / SSD / Charger / Flex / Hinge</small></div></div>
+<div class="item"><div class="ic">💾</div><div><b>Software Service</b><small>Reformat / OS Install / Apps / Virus Removal</small></div></div>
+<div class="item"><div class="ic">🧹</div><div><b>Deep Cleaning</b><small>Laptop / Desktop / Printer / Thermal Paste</small></div></div>
+<div class="item"><div class="ic">⚡</div><div><b>Basic Troubleshooting</b><small>Slow PC / Hanging / No Internet</small></div></div>
 </div>
 
 <div class="contact">
-<h2>CONTACT <span style="color:#A855F7">US</span></h2>
+<h2 style="font-family:Orbitron;font-size:13px">CONTACT <span style="color:#A855F7">US</span></h2>
 <div class="cbtns">
 <a class="cbtn mes" href="https://m.me/bosskaiyahtechrepair" target="_blank">MESSENGER</a>
-<a class="cbtn call" href="tel:09241887911">CALL</a>
-<a class="cbtn sms" href="sms:09241887911?body=Hello Boss Kaiyah, pa repair po">TEXT / SMS</a>
+<a class="cbtn call" href="tel:09XXXXXXXXX">CALL</a>
+<a class="cbtn sms" href="sms:09XXXXXXXXX">TEXT</a>
 </div>
-<p style="font-size:10px;color:#777;margin-top:10px">📍 Location: Cavite (Home Service Available) • Open Daily 9AM-8PM</p>
+<p style="font-size:10px;color:#777;margin-top:10px">📍 Cavite - Home Service Available • 9AM - 8PM Daily</p>
 </div>
 
-<footer>
-<b>© 2026 BOSS KAIYAH TECH REPAIR - CAVITE</b><br>All Rights Reserved • Basic Repair Specialist<br>Designed with 💜 Purple Black Theme
-</footer>
+<footer>© 2026 BOSS KAIYAH TECH REPAIR - CAVITE<br>All Rights Reserved • Basic Repair Specialist</footer>
 
-<!-- BOOK MODAL -->
-<div id="bookModal">
-<div class="modal">
+<div id="bookModal"><div class="modal">
 <h3>BOOK <span>REPAIR NOW</span></h3>
 <input id="bName" placeholder="Pangalan mo">
 <input id="bPlace" placeholder="Lugar / Barangay (ex: Dasma Cavite)">
 <input id="bAddress" placeholder="Complete Address">
-<select id="bDevice">
-<option value="">Anong ipapaayos?</option>
-<option>Cellphone</option>
-<option>Computer / Laptop</option>
-<option>Printer</option>
-<option>Gaming PC / Custom Build</option>
-</select>
-<textarea id="bIssue" placeholder="Anong sira? (ex: No display, basag LCD, paper jam)"></textarea>
-<div class="mbtns">
-<button class="mbtn cancel" onclick="closeBook()">Cancel</button>
-<button class="mbtn send" onclick="sendBook()">SEND SMS</button>
-</div>
-<p style="font-size:9px;color:#666;margin-top:8px">Pag click mo SEND, automatic mag oopen SMS mo na may complete info - send mo na lang sa amin.</p>
-</div>
-</div>
+<select id="bDevice"><option>Cellphone</option><option>Computer / Laptop</option><option>Printer</option><option>Gaming PC</option></select>
+<textarea id="bIssue" placeholder="Anong sira? ex: Basag LCD, No Display"></textarea>
+<div class="mbtns"><button class="mbtn cancel" onclick="closeBook()">Cancel</button><button class="mbtn send" onclick="sendBook()">SEND SMS</button></div>
+</div></div>
+
+<div id="adminModal"><div class="modal">
+<h3>SECRET <span>ADMIN</span></h3>
+<p style="font-size:10px;color:#888;margin-bottom:8px">Ikaw lang nakakakita nito! Type mo update mo dito.</p>
+<textarea id="adminText" placeholder="Ex: I'm available now, May promo 20% off today, Close muna"></textarea>
+<div class="mbtns"><button class="mbtn cancel" onclick="closeAdmin()">Close</button><button class="mbtn send" onclick="saveUpdate()">SAVE UPDATE</button></div>
+</div></div>
 
 <script>
-const MY_NUMBER = "09241887911"; // <-- PALITAN MO NUMBER MO DITO
+const MY_NUMBER="09XXXXXXXXX";
+let tapCount=0, tapTimer;
+document.getElementById('secretLogo').addEventListener('click',()=>{
+ tapCount++; clearTimeout(tapTimer);
+ if(tapCount>=10){ openAdmin(); tapCount=0; }
+ else{ tapTimer=setTimeout(()=>{tapCount=0},2000); }
+});
 function openBook(){document.getElementById('bookModal').style.display='grid'}
 function closeBook(){document.getElementById('bookModal').style.display='none'}
+function openAdmin(){document.getElementById('adminModal').style.display='grid'; document.getElementById('adminText').value=localStorage.getItem('bk_update')||""}
+function closeAdmin(){document.getElementById('adminModal').style.display='none'}
+function saveUpdate(){let t=document.getElementById('adminText').value; if(!t)return; localStorage.setItem('bk_update',t); document.getElementById('updateText').innerText=t; closeAdmin(); alert('Na-update na!');}
 function sendBook(){
-let name=document.getElementById('bName').value||"Walang pangalan";
-let lugar=document.getElementById('bPlace').value||"Walang lugar";
-let addr=document.getElementById('bAddress').value||"Walang address";
-let dev=document.getElementById('bDevice').value||"Hindi nasabi";
-let issue=document.getElementById('bIssue').value||"Hindi nasabi";
-let msg=`BOSS KAIYAH BOOKING:%0AName: ${name}%0ALugar: ${lugar}%0AAddress: ${addr}%0ADevice: ${dev}%0ASira: ${issue}%0A%0AGaling sa website - amatiga.github.io`;
-window.location.href=`sms:${MY_NUMBER}?body=${msg}`;
-closeBook();
+ let n=document.getElementById('bName').value||"No name";
+ let p=document.getElementById('bPlace').value||"No lugar";
+ let a=document.getElementById('bAddress').value||"No address";
+ let d=document.getElementById('bDevice').value;
+ let i=document.getElementById('bIssue').value||"No details";
+ let msg=`BOSS KAIYAH BOOKING:%0AName:${n}%0ALugar:${p}%0AAddress:${a}%0ADevice:${d}%0ASira:${i}`;
+ window.location.href=`sms:${MY_NUMBER}?body=${msg}`; closeBook();
 }
+window.onload=()=>{let s=localStorage.getItem('bk_update'); if(s) document.getElementById('updateText').innerText=s;}
 </script>
-
 </body>
 </html>
