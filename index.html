@@ -25,8 +25,7 @@ body{background:#06000F;color:#fff;font-family:'Inter',sans-serif;overflow-x:hid
 .hero-text h1 span{color:var(--p)}
 .hero-text p{color:#bbb;font-size:11px;margin-top:8px;line-height:1.4}
 .main{display:grid;grid-template-columns:1fr 1fr;gap:10px;padding:16px}
-.card{background:var(--card);border:1px solid #221444;border-radius:16px;overflow:hidden;transition:.3s}
-.card:hover{transform:translateY(-3px);border-color:var(--p)}
+.card{background:var(--card);border:1px solid #221444;border-radius:16px;overflow:hidden}
 .card img{width:100%;height:110px;object-fit:cover}
 .card-info{padding:11px}
 .card-info h3{font-family:'Orbitron';font-size:11px}
@@ -36,7 +35,7 @@ body{background:#06000F;color:#fff;font-family:'Inter',sans-serif;overflow-x:hid
 .videos h2{font-family:'Orbitron';font-size:14px;margin:18px 0 12px}
 .videos h2 span{color:var(--p)}
 .vid{background:var(--card);border:1px solid #221444;border-radius:16px;overflow:hidden;margin-bottom:14px}
-.vid video{width:100%;height:230px;background:#000;object-fit:cover}
+.vid video{width:100%;height:230px;background:#000;object-fit:cover;display:block}
 .vid .cap{padding:10px 12px;font-size:11px;color:#ccc;display:flex;justify-content:space-between}
 .services{padding:0 16px;display:grid;grid-template-columns:1fr 1fr;gap:9px;margin-top:12px}
 .item{background:linear-gradient(135deg,#150D2E,#0A0518);border:1px solid #221444;border-radius:12px;padding:11px;display:flex;gap:9px;align-items:center}
@@ -48,13 +47,11 @@ body{background:#06000F;color:#fff;font-family:'Inter',sans-serif;overflow-x:hid
 .cbtn{flex:1;padding:13px;border-radius:12px;text-align:center;text-decoration:none;font-weight:900;font-size:11px;color:#fff}
 .cbtn.mes{background:#006AFF}.cbtn.call{background:var(--p)}.cbtn.sms{background:#222;border:1px solid #333}
 footer{text-align:center;padding:16px;font-size:8px;color:#666;border-top:1px solid #111;line-height:1.6}
-
-/* FLOATING ANNOUNCEMENT */
-#chatAnnounce{position:fixed;bottom:22px;right:14px;z-index:400;display:flex;align-items:flex-end;gap:8px;cursor:pointer} .chat-bubble{background:#FFD93D;border:3px solid var(--p);border-radius:18px 18px 4px 18px;padding:10px 14px;max-width:175px} .chat-bubble p{color:#4C1D95;font-weight:900;font-size:12px;line-height:1.1} .chat-avatar{width:54px;height:54px;border-radius:50%;border:3px solid var(--p);object-fit:cover;background:var(--p);box-shadow:0 0 15px rgba(168,85,247,.6);transform:translateZ(0)}
+/* FINAL FIX - AI AVATAR - WALANG FLICKER */
+#chatAnnounce{position:fixed;bottom:22px;right:14px;z-index:400;display:flex;align-items:flex-end;gap:8px;cursor:pointer}
+.chat-bubble{background:#FFD93D;border:3px solid var(--p);border-radius:18px 18px 4px 18px;padding:10px 14px;max-width:175px}
 .chat-bubble p{color:#4C1D95;font-weight:900;font-size:12px;line-height:1.1}
-.chat-avatar{width:54px;height:54px;border-radius:50%;border:3px solid var(--p);object-fit:cover;background:var(--p);box-shadow:0 0 15px rgba(168,85,247,.6)}
-
-/* MODALS */
+.chat-avatar{width:62px;height:62px;border-radius:50%;border:3px solid var(--p);object-fit:cover;background:var(--p);box-shadow:0 0 15px rgba(168,85,247,.8);transform:translateZ(0)}
 #bookModal,#adminModal{position:fixed;inset:0;background:rgba(0,0,0,.9);z-index:600;display:none;place-items:center;padding:16px}
 .modal{background:#110A25;border:1px solid var(--p);border-radius:18px;padding:18px;width:100%;max-width:380px}
 .modal h3{font-family:'Orbitron';font-size:13px;margin-bottom:10px}
@@ -68,7 +65,6 @@ footer{text-align:center;padding:16px;font-size:8px;color:#666;border-top:1px so
 </style>
 </head>
 <body>
-
 <div class="topnav">
 <div class="logo-wrap">
 <img id="secretLogo" src="logo.png" alt="Logo" onerror="this.src='https://cdn-icons-png.flaticon.com/512/2972/2972995.png'">
@@ -76,9 +72,7 @@ footer{text-align:center;padding:16px;font-size:8px;color:#666;border-top:1px so
 </div>
 <button class="btn-book" onclick="openBook()">BOOK NOW</button>
 </div>
-
 <div class="update">📢 <span id="updateText">Available Now! Cellphone • Computer • Printer • Gaming Build - PM lang may promo! 🔧</span></div>
-
 <div class="hero">
 <img src="https://images.unsplash.com/photo-1593642632823-8f785ba67e45?w=1200&q=80" alt="Repair">
 <div class="ov"></div>
@@ -87,14 +81,12 @@ footer{text-align:center;padding:16px;font-size:8px;color:#666;border-top:1px so
 <p>Quality Repair • Mabilis • Mura • May Warranty — Cavite Based, Home Service Available</p>
 </div>
 </div>
-
 <div class="main">
 <div class="card"><img src="https://images.unsplash.com/photo-1585060544812-6b45742d762f?w=400"><div class="card-info"><h3>CELLPHONE <span>REPAIR</span></h3><p>Professional LCD Replacement, Battery & Charging Fix</p></div></div>
 <div class="card"><img src="https://images.unsplash.com/photo-1591488320449-011701bb6704?w=400"><div class="card-info"><h3>COMPUTER <span>REPAIR</span></h3><p>Laptop & Desktop Expert - No Power, No Display Fixed</p></div></div>
 <div class="card"><img src="https://images.unsplash.com/photo-1612815154858-60aa4c59eaa6?w=400"><div class="card-info"><h3>PRINTER <span>REPAIR</span></h3><p>Complete Printer Service - Paper Jam, Cleaning & Reset</p></div></div>
 <div class="card"><img src="https://images.unsplash.com/photo-1587202372775-e229f172b9d7?w=400"><div class="card-info"><h3>GAMING <span>BUILD</span></h3><p>Custom Gaming PC Build, Upgrade & RGB Setup</p></div></div>
 </div>
-
 <div style="padding:0 16px"><h2 style="font-family:Orbitron;font-size:13px;margin:6px 0 10px">BASIC REPAIR & <span style="color:#A855F7">PARTS REPLACEMENT</span></h2></div>
 <div class="services">
 <div class="item"><div class="ic">📱</div><div><b>Cellphone Specialist</b><small>LCD / Touchscreen / Battery / Charging Port / Water Damage Repair</small></div></div>
@@ -104,32 +96,26 @@ footer{text-align:center;padding:16px;font-size:8px;color:#666;border-top:1px so
 <div class="item"><div class="ic">🔋</div><div><b>Premium Parts Replacement</b><small>Original LCD • Battery • Keyboard • RAM • SSD • Charger • Flex Cable • Hinge</small></div></div>
 <div class="item"><div class="ic">✨</div><div><b>Complete Care Service</b><small>Deep Cleaning • Thermal Repaste • Software Install • Virus Removal • Optimization</small></div></div>
 </div>
-
 <div class="videos">
 <h2>REAL <span>REPAIR VIDEOS</span></h2>
-<div class="vid"><video controls playsinline poster="https://images.unsplash.com/photo-1585060544812-6b45742d762f?w=600"><source src="https://videos.pexels.com/video-files/18069234/18069234-uhd_1440_1440_24fps.mp4" type="video/mp4"></video><div class="cap"><span>📱 Actual Cellphone LCD Replacement</span><span>▶</span></div></div>
-<div class="vid"><video controls playsinline muted preload="metadata" poster="https://images.unsplash.com/photo-1591488320449-011701bb6704?w=600"><source src="https://videos.pexels.com/video-files/18069234/18069234-uhd_1440_1440_24fps.mp4" type="video/mp4"></video>
-<div class="cap"><span>💻 Laptop Deep Cleaning & Repaste</span><span>▶</span></div></div>
+<div class="vid"><video controls playsinline muted preload="metadata" poster="https://images.unsplash.com/photo-1585060544812-6b45742d762f?w=600"><source src="https://videos.pexels.com/video-files/18069234/18069234-uhd_1440_1440_24fps.mp4" type="video/mp4"></video><div class="cap"><span>📱 Actual Cellphone LCD Replacement</span><span>▶</span></div></div>
+<div class="vid"><video controls playsinline muted preload="metadata" poster="https://images.unsplash.com/photo-1591488320449-011701bb6704?w=600"><source src="https://videos.pexels.com/video-files/3191570/3191570-uhd_2560_1440_25fps.mp4" type="video/mp4"></video><div class="cap"><span>💻 Laptop Deep Cleaning & Repaste</span><span>▶</span></div></div>
 </div>
-
 <div class="contact">
 <h2 style="font-family:Orbitron;font-size:13px">CONTACT <span style="color:#A855F7">US NOW</span></h2>
 <div class="cbtns">
-<a class="cbtn mes" href="https://m.me/bosskaiyahtechrepair" target="_blank">MESSENGER</a>
+<a class="cbtn mes" href="https://m.me/61594971293775" target="_blank">MESSENGER</a>
 <a class="cbtn call" href="tel:09XXXXXXXXX">CALL</a>
 <a class="cbtn sms" href="sms:09XXXXXXXXX">TEXT</a>
 </div>
 <p style="font-size:10px;color:#777;margin-top:10px">📍 Cavite - Home Service Available • Open Daily 9AM-8PM • With Warranty</p>
 </div>
-
 <footer>© 2026 BOSS KAIYAH TECH REPAIR - CAVITE • EST 2026<br>All Rights Reserved • Trusted Basic Repair Specialist • Purple Black Theme</footer>
-
-<!-- FLOATING ANNOUNCEMENT - LALAKI PURPLE -->
-<div id="chatAnnounce" onclick="window.open('https://m.me/bosskaiyahtechrepair','_blank')">
+<!-- AI AVATAR CHAT - BOSS KAIYAH -->
+<div id="chatAnnounce" onclick="window.open('https://m.me/61594971293775','_blank')">
 <div class="chat-bubble"><p>Hi, click here to chat with us!</p></div>
-<img class="chat-avatar" src="announce.png" alt="Chat" onerror="this.src='logo.png'">
+<img class="chat-avatar" src="announce.png" alt="Boss Kaiyah AI" onerror="this.src='logo.png'">
 </div>
-
 <div id="bookModal"><div class="modal">
 <h3>BOOK <span>REPAIR NOW</span></h3>
 <input id="bName" placeholder="Pangalan mo">
@@ -139,21 +125,19 @@ footer{text-align:center;padding:16px;font-size:8px;color:#666;border-top:1px so
 <textarea id="bIssue" placeholder="Anong sira? (ex: Basag LCD, No display, Paper jam)"></textarea>
 <div class="mbtns"><button class="mbtn cancel" onclick="closeBook()">Cancel</button><button class="mbtn send" onclick="sendBook()">SEND SMS</button></div>
 </div></div>
-
 <div id="adminModal"><div class="modal">
 <h3>SECRET <span>ADMIN • 10 TAPS</span></h3>
 <p style="font-size:10px;color:#888;margin-bottom:8px">Ikaw lang nakakakita nito Parekoy! Edit mo announcement sa taas.</p>
 <textarea id="adminText" placeholder="Ex: Available Now! May 20% promo sa LCD today!"></textarea>
 <div class="mbtns"><button class="mbtn cancel" onclick="closeAdmin()">Close</button><button class="mbtn send" onclick="saveUpdate()">SAVE</button></div>
 </div></div>
-
 <script>
 const MY_NUMBER="09XXXXXXXXX";
 let tapCount=0,tapTimer;
 document.getElementById('secretLogo').addEventListener('click',()=>{
- tapCount++;clearTimeout(tapTimer);
- if(tapCount>=10){openAdmin();tapCount=0;}
- else{tapTimer=setTimeout(()=>{tapCount=0},2000);}
+tapCount++;clearTimeout(tapTimer);
+if(tapCount>=10){openAdmin();tapCount=0;}
+else{tapTimer=setTimeout(()=>{tapCount=0},2000);}
 });
 function openBook(){document.getElementById('bookModal').style.display='grid'}
 function closeBook(){document.getElementById('bookModal').style.display='none'}
@@ -161,13 +145,13 @@ function openAdmin(){document.getElementById('adminModal').style.display='grid';
 function closeAdmin(){document.getElementById('adminModal').style.display='none'}
 function saveUpdate(){let t=document.getElementById('adminText').value;if(!t)return;localStorage.setItem('bk_update',t);document.getElementById('updateText').innerText=t;closeAdmin();alert('Na-update na Parekoy!');}
 function sendBook(){
- let n=document.getElementById('bName').value||"No name";
- let p=document.getElementById('bPlace').value||"No lugar";
- let a=document.getElementById('bAddress').value||"No address";
- let d=document.getElementById('bDevice').value;
- let i=document.getElementById('bIssue').value||"No details";
- let msg=`BOSS KAIYAH BOOKING:%0AName:${n}%0ALugar:${p}%0AAddress:${a}%0ADevice:${d}%0ASira:${i}`;
- window.location.href=`sms:${MY_NUMBER}?body=${msg}`;closeBook();
+let n=document.getElementById('bName').value||"No name";
+let p=document.getElementById('bPlace').value||"No lugar";
+let a=document.getElementById('bAddress').value||"No address";
+let d=document.getElementById('bDevice').value;
+let i=document.getElementById('bIssue').value||"No details";
+let msg=`BOSS KAIYAH BOOKING:%0AName:${n}%0ALugar:${p}%0AAddress:${a}%0ADevice:${d}%0ASira:${i}`;
+window.location.href=`sms:${MY_NUMBER}?body=${msg}`;closeBook();
 }
 window.onload=()=>{let s=localStorage.getItem('bk_update');if(s)document.getElementById('updateText').innerText=s;}
 </script>
