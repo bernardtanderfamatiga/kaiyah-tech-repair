@@ -89,9 +89,9 @@ footer{text-align:center;padding:16px 16px 30px;font-size:8px;color:#666;border-
 </div>
 <div style="padding:0 16px"><h2 style="font-family:Orbitron;font-size:13px;margin:6px 0 10px">BASIC REPAIR & <span style="color:#A855F7">PARTS REPLACEMENT</span></h2></div>
 <div class="services">
-<div class="item"><div class="ic">📱</div><div><b>Cellphone Specialist</b><small>LCD / Touchscreen / Battery / Charging Port / Water Damage Repair</small></div></div>
+<div class="item"><div class="ic">📱</div><div><b>Cellphone Repair</b><small>LCD / Touchscreen / Battery / Charging Port / Water Damage Repair</small></div></div>
 <div class="item"><div class="ic">💻</div><div><b>Computer & Laptop</b><small>No Power / No Display / Keyboard / Hinge / Slow System Fix</small></div></div>
-<div class="item"><div class="ic">🖨️</div><div><b>Printer Expert</b><small>No Print / Paper Jam / Ink System / Deep Cleaning / Reset Service</small></div></div>
+<div class="item"><div class="ic">🖨️</div><div><b>Printer Repair</b><small>No Print / Paper Jam / Ink System / Deep Cleaning / Reset Service</small></div></div>
 <div class="item"><div class="ic">🎮</div><div><b>Gaming PC Build</b><small>Custom Build • Full Upgrade • RGB Lighting • Cable Management • Setup</small></div></div>
 <div class="item"><div class="ic">🔋</div><div><b>Premium Parts Replacement</b><small>Original LCD • Battery • Keyboard • RAM • SSD • Charger • Flex Cable • Hinge</small></div></div>
 <div class="item"><div class="ic">✨</div><div><b>Complete Care Service</b><small>Deep Cleaning • Thermal Repaste • Software Install • Virus Removal • Optimization</small></div></div>
@@ -114,13 +114,13 @@ footer{text-align:center;padding:16px 16px 30px;font-size:8px;color:#666;border-
 <div class="contact">
 <h2 style="font-family:Orbitron;font-size:13px">CONTACT <span style="color:#A855F7">US NOW</span></h2>
 <div class="cbtns">
-<a class="cbtn mes" href="https://m.me/61594971293775" target="_blank">MESSENGER</a>
-<a class="cbtn call" href="tel:09241887911">CALL</a>
-<a class="cbtn sms" href="sms:09241887911">TEXT</a>
+<a class="cbtn mes" href="https://m.me/61594971293775" target="_blank">💬 MESSENGER</a>
+<a class="cbtn call" href="tel:09241887911">📞 CALL</a>
+<a class="cbtn sms" href="sms:09241887911">📝 TEXT</a>
 </div>
-<p style="font-size:10px;color:#777;margin-top:10px">📍 Cavite - Home Service Available • Open Daily 9AM-8PM • With Warranty</p>
+<p style="font-size:10px;color:#777;margin-top:10px">📍Home Service Available • Open Daily 9AM-8PM • With Warranty</p>
 </div>
-<footer>© 2026 BOSS KAIYAH TECH REPAIR - CAVITE • EST 2026<br>All Rights Reserved • Trusted Basic Repair Specialist • Purple Black Theme<br><br><br></footer>
+<footer>© 2026 BOSS KAIYAH TECH REPAIR - CAVITE • EST 2026<br>All Rights Reserved • Trusted Basic Repair IT Technician • Purle Designed Faitht<br>Design By: Bernard Famatiga and Parekoy Muse Spark<br><br><br></footer>
 
 <!-- DRAGGABLE CHAT BOOT - WALANG X - NAHAWAKAN -->
 <div id="chatAnnounce">
@@ -138,9 +138,9 @@ footer{text-align:center;padding:16px 16px 30px;font-size:8px;color:#666;border-
 <div class="mbtns"><button class="mbtn cancel" onclick="closeBook()">Cancel</button><button class="mbtn send" onclick="sendBook()">SEND SMS</button></div>
 </div></div>
 <div id="adminModal"><div class="modal">
-<h3>SECRET <span>ADMIN • 10 TAPS</span></h3>
+<h3>SECRET <span>ADMIN • 15 TAPS</span></h3>
 <p style="font-size:10px;color:#888;margin-bottom:8px">Ikaw lang nakakakita nito Parekoy! Edit mo announcement sa taas.</p>
-<textarea id="adminText" placeholder="Ex: Available Now! May 20% promo sa LCD today!"></textarea>
+<textarea id="adminText" placeholder=""></textarea>
 <div class="mbtns"><button class="mbtn cancel" onclick="closeAdmin()">Close</button><button class="mbtn send" onclick="saveUpdate()">SAVE</button></div>
 </div></div>
 <script>
@@ -153,11 +153,11 @@ function openAdmin(){document.getElementById('adminModal').style.display='grid';
 function closeAdmin(){document.getElementById('adminModal').style.display='none'}
 function saveUpdate(){let t=document.getElementById('adminText').value;if(!t)return;localStorage.setItem('bk_update',t);document.getElementById('updateText').innerText=t;closeAdmin();alert('Na-update na Parekoy!');}
 function sendBook(){
-let n=document.getElementById('bName').value||"No name";
-let p=document.getElementById('bPlace').value||"No lugar";
-let a=document.getElementById('bAddress').value||"No address";
+let n=document.getElementById('bName').value||"";
+let p=document.getElementById('bPlace').value||"";
+let a=document.getElementById('bAddress').value||"";
 let d=document.getElementById('bDevice').value;
-let i=document.getElementById('bIssue').value||"No details";
+let i=document.getElementById('bIssue').value||"";
 let msg=`BOSS KAIYAH BOOKING:%0AName:${n}%0ALugar:${p}%0AAddress:${a}%0ADevice:${d}%0ASira:${i}`;
 window.location.href=`sms:${MY_NUMBER}?body=${msg}`;closeBook();
 }
