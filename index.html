@@ -48,17 +48,10 @@ body{background:#06000F;color:#fff;font-family:'Inter',sans-serif;overflow-x:hid
 .cbtn{flex:1;padding:13px;border-radius:12px;text-align:center;text-decoration:none;font-weight:900;font-size:11px;color:#fff}
 .cbtn.mes{background:#006AFF}.cbtn.call{background:var(--p)}.cbtn.sms{background:#222;border:1px solid #333}
 footer{text-align:center;padding:16px 16px 30px;font-size:8px;color:#666;border-top:1px solid #111;line-height:1.6}
-
-/* FIXED FLOATING CHAT - HINDI NATATAKPAN TEXT */
-#chatAnnounce{position:fixed;bottom:22px;right:14px;z-index:400;display:flex;align-items:flex-end;gap:8px;transition:all .3s}
-#chatAnnounce.hide{transform:translateY(120px);opacity:0;pointer-events:none}
-.chat-bubble{background:#FFD93D;border:3px solid var(--p);border-radius:18px 18px 4px 18px;padding:10px 14px;max-width:175px;position:relative}
-.chat-close{position:absolute;top:-8px;right:-8px;width:22px;height:22px;background:#111;border:1px solid var(--p);color:#fff;border-radius:50%;font-size:12px;display:grid;place-items:center;cursor:pointer}
+#chatAnnounce{position:fixed;bottom:22px;right:14px;z-index:400;display:flex;align-items:flex-end;gap:8px;cursor:grab;touch-action:none}
+.chat-bubble{background:#FFD93D;border:3px solid var(--p);border-radius:18px 18px 4px 18px;padding:10px 14px;max-width:175px}
 .chat-bubble p{color:#4C1D95;font-weight:900;font-size:12px;line-height:1.1}
-.chat-avatar{width:62px;height:62px;border-radius:50%;border:3px solid var(--p);object-fit:cover;background:var(--p);box-shadow:0 0 15px rgba(168,85,247,.8);transform:translateZ(0);cursor:pointer}
-#chatShowBtn{position:fixed;bottom:22px;right:14px;z-index:399;width:62px;height:62px;border-radius:50%;background:linear-gradient(135deg,#A855F7,#7C3AED);border:3px solid #fff;color:#fff;font-size:28px;display:none;place-items:center;box-shadow:0 5px 20px rgba(168,85,247,.6);cursor:pointer}
-#chatShowBtn.show{display:grid}
-
+.chat-avatar{width:62px;height:62px;border-radius:50%;border:3px solid var(--p);object-fit:cover;background:var(--p);box-shadow:0 0 15px rgba(168,85,247,.8)}
 #bookModal,#adminModal{position:fixed;inset:0;background:rgba(0,0,0,.9);z-index:600;display:none;place-items:center;padding:16px}
 .modal{background:#110A25;border:1px solid var(--p);border-radius:18px;padding:18px;width:100%;max-width:380px}
 .modal h3{font-family:'Orbitron';font-size:13px;margin-bottom:10px}
@@ -103,17 +96,14 @@ footer{text-align:center;padding:16px 16px 30px;font-size:8px;color:#666;border-
 <div class="item"><div class="ic">🔋</div><div><b>Premium Parts Replacement</b><small>Original LCD • Battery • Keyboard • RAM • SSD • Charger • Flex Cable • Hinge</small></div></div>
 <div class="item"><div class="ic">✨</div><div><b>Complete Care Service</b><small>Deep Cleaning • Thermal Repaste • Software Install • Virus Removal • Optimization</small></div></div>
 </div>
-
 <div class="videos">
 <h2>REAL <span>REPAIR VIDEOS</span></h2>
-<!-- VIDEO 1 - YOUTUBE MO NA -->
 <div class="vid">
 <div class="yt-wrap">
 <iframe src="https://www.youtube.com/embed/lXmuFncAuZQ" title="Boss Kaiyah Repair 1" allowfullscreen></iframe>
 </div>
 <div class="cap"><span>🔧 Installation of Mainboard and Keyboard - Actual Repair</span><span>▶</span></div>
 </div>
-<!-- VIDEO 2 - YOUTUBE MO NA -->
 <div class="vid">
 <div class="yt-wrap">
 <iframe src="https://www.youtube.com/embed/8NuhEbz1Zew" title="Boss Kaiyah Repair 2" allowfullscreen></iframe>
@@ -121,7 +111,6 @@ footer{text-align:center;padding:16px 16px 30px;font-size:8px;color:#666;border-
 <div class="cap"><span>💻 Actual Repair & Testing - Boss Kaiyah Works</span><span>▶</span></div>
 </div>
 </div>
-
 <div class="contact">
 <h2 style="font-family:Orbitron;font-size:13px">CONTACT <span style="color:#A855F7">US NOW</span></h2>
 <div class="cbtns">
@@ -133,15 +122,11 @@ footer{text-align:center;padding:16px 16px 30px;font-size:8px;color:#666;border-
 </div>
 <footer>© 2026 BOSS KAIYAH TECH REPAIR - CAVITE • EST 2026<br>All Rights Reserved • Trusted Basic Repair Specialist • Purple Black Theme<br><br><br></footer>
 
-<!-- FLOATING CHAT - HINDI NATATAKPAN - MAY CLOSE -->
+<!-- DRAGGABLE CHAT BOOT - WALANG X - NAHAWAKAN -->
 <div id="chatAnnounce">
-<div class="chat-bubble" onclick="window.open('https://m.me/61594971293775','_blank')">
-<div class="chat-close" onclick="event.stopPropagation();closeChat()">✕</div>
-<p>Hi, click here to chat with us!</p>
-</div>
+<div class="chat-bubble" onclick="window.open('https://m.me/61594971293775','_blank')"><p>Hi, click here to chat with us!</p></div>
 <img class="chat-avatar" src="chat_logo.jpg" alt="Boss Kaiyah AI" onerror="this.src='logo.png'" onclick="window.open('https://m.me/61594971293775','_blank')">
 </div>
-<div id="chatShowBtn" onclick="showChat()">💬</div>
 
 <div id="bookModal"><div class="modal">
 <h3>BOOK <span>REPAIR NOW</span></h3>
@@ -158,7 +143,6 @@ footer{text-align:center;padding:16px 16px 30px;font-size:8px;color:#666;border-
 <textarea id="adminText" placeholder="Ex: Available Now! May 20% promo sa LCD today!"></textarea>
 <div class="mbtns"><button class="mbtn cancel" onclick="closeAdmin()">Close</button><button class="mbtn send" onclick="saveUpdate()">SAVE</button></div>
 </div></div>
-
 <script>
 const MY_NUMBER="09241887911";
 let tapCount=0,tapTimer;
@@ -177,15 +161,20 @@ let i=document.getElementById('bIssue').value||"No details";
 let msg=`BOSS KAIYAH BOOKING:%0AName:${n}%0ALugar:${p}%0AAddress:${a}%0ADevice:${d}%0ASira:${i}`;
 window.location.href=`sms:${MY_NUMBER}?body=${msg}`;closeBook();
 }
-function closeChat(){
-document.getElementById('chatAnnounce').classList.add('hide');
-document.getElementById('chatShowBtn').classList.add('show');
-}
-function showChat(){
-document.getElementById('chatAnnounce').classList.remove('hide');
-document.getElementById('chatShowBtn').classList.remove('show');
-}
 window.onload=()=>{let s=localStorage.getItem('bk_update');if(s)document.getElementById('updateText').innerText=s;}
+
+// DRAGGABLE - MAIKLI LANG
+let el=document.getElementById('chatAnnounce'),rx,by,sx,sy,drag=false;
+el.addEventListener('pointerdown',e=>{rx=innerWidth-el.getBoundingClientRect().right;by=innerHeight-el.getBoundingClientRect().bottom;sx=e.clientX;sy=e.clientY;drag=false;el.setPointerCapture(e.pointerId);});
+el.addEventListener('pointermove',e=>{
+ if(e.buttons){
+  let dx=e.clientX-sx, dy=e.clientY-sy;
+  if(Math.abs(dx)>3||Math.abs(dy)>3) drag=true;
+  el.style.right=Math.max(5,Math.min(innerWidth-el.offsetWidth-5,rx-dx))+'px';
+  el.style.bottom=Math.max(5,Math.min(innerHeight-el.offsetHeight-5,by-dy))+'px';
+ }
+});
+el.addEventListener('click',e=>{if(drag){e.stopPropagation();e.preventDefault();drag=false;}},true);
 </script>
 </body>
 </html>
