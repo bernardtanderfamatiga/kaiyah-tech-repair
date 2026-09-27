@@ -5,72 +5,120 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>BOSS KAIYAH TECH REPAIR - EST 2026</title>
 <style>
-body{margin:0;background:#0a0a12;color:white;font-family:Arial;overflow-x:hidden}
-.header{display:flex;justify-content:space-between;align-items:center;padding:15px;background:#000;border-bottom:2px solid #8B5CF6}
-.logo{display:flex;align-items:center;gap:10px}
-.logo img{width:60px;height:60px;border-radius:50%;border:2px solid #8B5CF6}
-.book{ background:#8B5CF6;color:white;padding:10px 20px;border-radius:25px;text-decoration:none;font-weight:bold}
-.video-card{background:#1a1a2e;margin:15px;border-radius:15px;overflow:hidden;border:1px solid #8B5CF6}
-.video-card video, .video-card iframe{width:100%;height:250px;border:none;background:#000}
-.video-title{padding:12px;font-weight:bold}
-.contact{padding:20px;text-align:center}
-.btn{display:inline-block;padding:15px 25px;border-radius:30px;margin:5px;text-decoration:none;font-weight:bold;color:white}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#0a0a12;color:#fff;font-family:Arial, sans-serif;padding-bottom:80px}
+.header{
+background:#000;display:flex;justify-content:space-between;
+align-items:center;padding:15px 20px;border-bottom:2px solid #8B5CF6;
+position:sticky;top:0;z-index:100
+}
+.logo-area{display:flex;align-items:center;gap:12px}
+.logo-circle{
+width:60px;height:60px;border-radius:50%;border:2px solid #8B5CF6;
+background:#111;display:flex;align-items:center;justify-content:center;
+overflow:hidden
+}
+.logo-circle img{width:100%;height:100%;object-fit:cover}
+.header-text b{font-size:18px}
+.header-text span{color:#8B5CF6;font-size:16px}
+.header-text small{color:#aaa}
+.book-now{
+background:#8B5CF6;color:#fff;padding:12px 22px;border-radius:25px;
+text-decoration:none;font-weight:bold;font-size:14px
+}
+.container{padding:15px}
+.card{
+background:#1a1a2e;border:1px solid #8B5CF6;border-radius:18px;
+overflow:hidden;margin-bottom:18px
+}
+.card-img{
+width:100%;height:240px;background:#0f0f1e;display:flex;
+align-items:center;justify-content:center;position:relative
+}
+.card-img img{width:100%;height:100%;object-fit:cover}
+.play-badge{
+position:absolute;width:65px;height:65px;background:rgba(255,255,255,0.9);
+border-radius:50%;display:flex;align-items:center;justify-content:center;
+font-size:28px;color:#000
+}
+.card-footer{
+background:#12122a;padding:14px 16px;display:flex;
+justify-content:space-between;align-items:center;font-weight:bold
+}
+.contact-title{text-align:center;margin:25px 0 15px;font-size:22px;letter-spacing:1px}
+.contact-title span{color:#8B5CF6}
+.buttons{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-bottom:15px}
+.btn{padding:14px 22px;border-radius:30px;text-decoration:none;
+font-weight:bold;color:#fff;min-width:110px;text-align:center}
 .messenger{background:#0084FF}
 .call{background:#8B5CF6}
-.text{background:#333}
-
-/* FIX SA FLICKER - ISA LANG CHAT BUTTON, WALANG ANIMATION NA NAG FLICKER */
-.chat-widget{
-position:fixed;bottom:20px;right:20px;z-index:9999;
-display:flex;align-items:center;gap:10px;
+.text-btn{background:#2a2a3a}
+.location{text-align:center;color:#aaa;font-size:14px;margin:15px 0}
+.footer{text-align:center;color:#666;font-size:11px;line-height:18px;padding:10px}
+/* FIXED CHAT WIDGET - HINDI NA NAG FLICKER */
+.chat-wrap{
+position:fixed;bottom:20px;right:15px;z-index:9999;
+display:flex;align-items:center;gap:10px
 }
 .chat-bubble{
-background:#FFEB3B;color:#000;padding:10px 15px;border-radius:15px;font-weight:bold;
-font-size:14px;box-shadow:0 4px 10px rgba(0,0,0,0.5);
+background:#FFEB3B;color:#000;padding:10px 14px;border-radius:14px;
+font-weight:bold;font-size:13px;box-shadow:0 3px 10px rgba(0,0,0,0.4)
 }
-.chat-btn{
+.chat-circle{
 width:60px;height:60px;background:#8B5CF6;border-radius:50%;
 display:flex;align-items:center;justify-content:center;
-font-size:30px;cursor:pointer;box-shadow:0 4px 15px rgba(139,92,246,0.6);
-text-decoration:none; /* WALANG FLICKER ANIMATION */
+font-size:28px;text-decoration:none;box-shadow:0 4px 12px rgba(139,92,246,0.5)
 }
 </style>
 </head>
 <body>
 
 <div class="header">
-<div class="logo">
-<img src="logo.png" alt="logo">
-<div><b>BOSS KAIYAH</b><br><span style="color:#8B5CF6">TECH REPAIR</span><br><small>EST • 2026</small></div>
+<div class="logo-area">
+<div class="logo-circle"><img src="logo.png" onerror="this.style.display='none';this.parentElement.innerHTML='BK'"></div>
+<div class="header-text"><b>BOSS KAIYAH</b><br><span>TECH REPAIR</span><br><small>EST • 2026</small></div>
 </div>
-<a class="book" href="https://m.me/61594971293775" target="_blank">BOOK NOW</a>
-</div>
-
-<!-- VIDEO 1 - ACTUAL CELLPHONE LCD -->
-<div class="video-card">
-<iframe src="https://www.youtube.com/embed/8MplG2P8Jl4?rel=0" allowfullscreen></iframe>
-<div class="video-title">📱 Actual Cellphone LCD Replacement</div>
+<a class="book-now" href="https://m.me/61594971293775" target="_blank">BOOK NOW</a>
 </div>
 
-<!-- VIDEO 2 - FINAL FIX - LAPTOP DEEP CLEANING - PALITAN NA NG TUNAY NA REPAIR VIDEO -->
-<div class="video-card">
-<iframe src="https://www.youtube.com/embed/0I7H3qJ7Q-I?rel=0" allowfullscreen></iframe>
-<div class="video-title">💻 Laptop Deep Cleaning & Repaste - Actual Repair</div>
+<div class="container">
+
+<!-- VIDEO 1 - HINDI NA CORRUPT - IMAGE MUNA -->
+<div class="card">
+<div class="card-img">
+<img src="https://images.unsplash.com/photo-1592899677977-9bb10ba128a5?w=600" alt="Cellphone Repair">
+<div class="play-badge">▶</div>
+</div>
+<div class="card-footer"><span>📱 Actual Cellphone LCD Replacement</span><span>▶</span></div>
 </div>
 
-<div class="contact">
-<h2>CONTACT <span style="color:#8B5CF6">US NOW</span></h2>
+<!-- VIDEO 2 - HINDI NA CORRUPT - IMAGE MUNA -->
+<div class="card">
+<div class="card-img">
+<img src="https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?w=600" alt="Laptop Repair">
+<div class="play-badge">▶</div>
+</div>
+<div class="card-footer"><span>💻 Laptop Deep Cleaning & Repaste</span><span>▶</span></div>
+</div>
+
+<div class="contact-title">CONTACT <span>US NOW</span></div>
+<div class="buttons">
 <a class="btn messenger" href="https://m.me/61594971293775" target="_blank">MESSENGER</a>
 <a class="btn call" href="tel:09123456789">CALL</a>
-<a class="btn text" href="sms:09123456789">TEXT</a>
-<p style="margin-top:15px;color:#aaa">📍 Cavite - Home Service Available</p>
-<p>© 2026 BOSS KAIYAH TECH REPAIR - CAVITE - EST 2026<br>All Rights Reserved • Trusted Basic Repair Specialist</p>
+<a class="btn text-btn" href="sms:09123456789">TEXT</a>
+</div>
+<div class="location">📍 Cavite - Home Service Available - With Warranty</div>
+<div class="footer">
+© 2026 BOSS KAIYAH TECH REPAIR - CAVITE - EST 2026<br>
+All Rights Reserved • Trusted Basic Repair Specialist • Purple Black Theme
 </div>
 
-<!-- FINAL CHAT WIDGET - ISA LANG, HINDI NA NAG FLICKER -->
-<div class="chat-widget">
+</div>
+
+<!-- CHAT WIDGET - ISA LANG, WALANG FLICKER -->
+<div class="chat-wrap">
 <div class="chat-bubble">Hi, click here to chat with us!</div>
-<a class="chat-btn" href="https://m.me/61594971293775" target="_blank">💬</a>
+<a class="chat-circle" href="https://m.me/61594971293775" target="_blank">💬</a>
 </div>
 
 </body>
